@@ -1,0 +1,5 @@
+case slave = "den"
+amazon-textract-code-samples/master/src-csharp
+aws-amplify/amplify-ci-support', branch: 'master'
+branch: master
+build-support/codecov.sh

@@ -1,0 +1,1 @@
+The Upgrade Guide has moved to [Project Setup > Upgrade Guide](https://docs.amplify.aws/lib/project-setup/upgrade-guide/q/platform/ios/).
