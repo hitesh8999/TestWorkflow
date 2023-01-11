@@ -22,7 +22,6 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run sample command
-        shell: bash
         run: |
           title= "${{github.event.issue.title}}"       
           if [[ $title =~ ^octocat ]]; then
