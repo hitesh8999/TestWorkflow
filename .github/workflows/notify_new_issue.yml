@@ -24,8 +24,8 @@ jobs:
       - name: Run sample command
         shell: bash
         run: |
-          title= ${{github.event.issue.title}}         
-          if [[ $title =~ ^octocat ]]; then
+          title= "${{github.event.issue.title}}"       
+          if [[ ${{github.event.issue.title}} =~ ^octocat ]]; then
           echo "PR title starts with 'octocat'"
           exit 0
           else          
