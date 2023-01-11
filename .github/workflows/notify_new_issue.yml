@@ -29,6 +29,6 @@ jobs:
           echo "PR title starts with 'octocat'"
           exit 0
           else          
-          echo "PR title did not start with 'octocat' $SHELL" 
+          echo "PR title did not start with 'octocat' $GITHUB_WORKSPACE " 
           exit 1
           fi
