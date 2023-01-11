@@ -21,7 +21,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
-      - name: Run sample command
+      - name: Run webhook curl command
+        env:
+          WEBHOOK_URL: ${{ secrets.SLACK_ISSUE_WEBHOOK_URL }}
+          ISSUE: ${{toJson(github.event.issue.title)}}
         shell: bash
-        run: |
-          title= "${{ github.event.issue.title }}"
+        run: echo $ISSUE | sed 's/[^a-zA-Z0-9 &().,:]//g' | xargs -I {} curl -s POST "$WEBHOOK_URL" -H "Content-Type:application/json" --data '{"issue":"{}", "issueUrl":"${{github.event.issue.html_url}}", "user":"${{github.event.issue.user.login}}"}'
