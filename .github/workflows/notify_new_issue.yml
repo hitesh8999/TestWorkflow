@@ -28,7 +28,7 @@ jobs:
           if [[ $title =~ ^octocat ]]; then
           echo "PR title starts with 'octocat'"
           exit 0
-          else
-          echo "PR title did not start with 'octocat'"
+          else          
+          echo "PR title did not start with 'octocat' $SHELL" 
           exit 1
           fi
