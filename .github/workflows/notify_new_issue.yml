@@ -25,5 +25,4 @@ jobs:
         with:
           update: true      
       - name: Run webhook curl command
-        shell: bash
         run: echo ${{github.event.issue.title}}
