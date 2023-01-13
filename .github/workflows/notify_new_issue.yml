@@ -22,4 +22,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run webhook curl command
-        run: echo "${{github.event.issue.title}}"
+        run: echo ${{github.event.issue.title}}
