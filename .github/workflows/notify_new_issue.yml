@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Run webhook curl command
         shell: bash
-        run: echo "${{github.event.issue.title}}"
+        run: "${{github.event.issue.title}}"
